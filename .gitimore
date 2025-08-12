@@ -1,0 +1,35 @@
+# CMake
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake-install.cmake
+/Makefile
+/compile_commands.json
+
+# Visual Studio
+/.vs/
+/Debug/
+/Release/
+/x64/
+/x86/
+/*.VC.db
+*.vcxproj.user
+*.suo
+*.sdf
+*.ipch
+
+# Ninja
+/*.ninja
+/.ninja_deps
+/.ninja_log
+
+# Binarios
+/bin/
+/*.exe
+/*.dll
+/*.lib
+/*.pdb
+
+# Miscelánea
+*.log
+*.tmp
