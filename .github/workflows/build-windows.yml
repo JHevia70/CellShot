@@ -15,10 +15,16 @@ jobs:
       - name: Build (Release)
         run: cmake --build build --config Release --parallel
 
+      - name: List build tree (debug)
+        shell: pwsh
+        run: |
+          Get-ChildItem -Recurse -File build | Select-Object FullName
+
       - name: Publicar artefacto (cellshot.exe)
         uses: actions/upload-artifact@v4
         with:
           name: CellShot-win64
           path: |
-            build/Release/cellshot.exe
-            build/Release/*.dll
+            build/**/cellshot.exe
+            build/**/cellshot.pdb
+            build/**/raylib*.dll
